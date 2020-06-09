@@ -1,12 +1,18 @@
 import json
+import os
 from flask import request, _request_ctx_stack
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
 
-AUTH0_DOMAIN = 'fsnd-bn.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'castingagency'
+AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
+# 'fsnd-bn.auth0.com'
+
+ALGORITHMS = os.environ.get('ALGORITHMS')
+# ['RS256']
+
+API_AUDIENCE = os.environ.get('API_AUDIENCE')
+# 'castingagency'
 
 
 # AuthError Exception
