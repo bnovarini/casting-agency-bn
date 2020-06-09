@@ -14,6 +14,15 @@ def create_app(test_config=None):
     setup_db(app)
     CORS(app)
 
+    # HOME ENDPOINT
+
+    @app.route('/')
+    def show_welcome():
+        return jsonify({
+            'success': True,
+            'actors': 'welcome to casting agency API'
+        })
+
     # ACTOR ENDPOINTS
 
     @app.route('/actors')
