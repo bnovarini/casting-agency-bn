@@ -20,7 +20,7 @@ def create_app(test_config=None):
     def show_welcome():
         return jsonify({
             'success': True,
-            'actors': 'welcome to casting agency API'
+            'message': 'welcome to casting agency API'
         })
 
     # ACTOR ENDPOINTS
