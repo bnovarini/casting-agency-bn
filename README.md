@@ -56,7 +56,7 @@ python3 app.py
 
 ### Getting started
 
-- Base URL: 
+- Base URL: https://casting-agency-bn.herokuapp.com/
 - Authentication: this application assumes 3 roles in the casting agency:
     - Casting Assistant: 
         - Can view actors and movies
