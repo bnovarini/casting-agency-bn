@@ -112,7 +112,7 @@ Authorization errors will come with more detailed messages:
 
 ##### GET /actors
 - Fetches all actors, their movie castings and number of castings
-- Sample request: `curl http://0.0.0.0:8080/actors -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
+- Sample request: `curl https://casting-agency-bn.herokuapp.com/actors -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
 - Sample response: 
 ```
 {
@@ -179,7 +179,7 @@ Authorization errors will come with more detailed messages:
 
 ##### GET /actors/{actor_id}
 - Fetches specific actor by actor_id
-- Sample request: `curl http://0.0.0.0:8080/actors/3 -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
+- Sample request: `curl https://casting-agency-bn.herokuapp.com/actors/3 -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
 - Sample response:
 ```
 {
@@ -208,7 +208,7 @@ Authorization errors will come with more detailed messages:
 
 ##### POST /actors
 - Adds a new actor to the database and returns the list of all actors, their castings and number of castings
-- Sample request: `curl -X POST  http://0.0.0.0:8080/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"name": "Test actor 7", "age": 25, "gender": "male"}'`
+- Sample request: `curl -X POST  https://casting-agency-bn.herokuapp.com/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"name": "Test actor 7", "age": 25, "gender": "male"}'`
 - Sample response:
 ```
 {
@@ -283,7 +283,7 @@ Authorization errors will come with more detailed messages:
 
 ##### PATCH /actors/{actor_id}
 - Modifies attributes from an actor in the database if they exist and returns the actor information
-- Sample request: `curl -X POST  http://0.0.0.0:8080/actors/7 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"name": "Test modified actor", "age": 34, "gender": "female"}'`
+- Sample request: `curl -X POST  https://casting-agency-bn.herokuapp.com/actors/7 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"name": "Test modified actor", "age": 34, "gender": "female"}'`
 - Sample response:
 ```
 {
@@ -302,7 +302,7 @@ Authorization errors will come with more detailed messages:
 ##### DELETE /actors/{actor_id}
 - Deletes the actor from the database if they exist
 - Returns success value and actor_id of deleted actor.
-- Sample request: `curl -X DELETE http://0.0.0.0:8080/actors/7 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>`
+- Sample request: `curl -X DELETE https://casting-agency-bn.herokuapp.com/actors/7 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>`
 - Sample response:
 ```
 {
@@ -315,7 +315,7 @@ Authorization errors will come with more detailed messages:
 
 ##### GET /movies
 - Fetches all movies, their actor castings and number of actors casted
-- Sample request: `curl http://0.0.0.0:8080/movies -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
+- Sample request: `curl https://casting-agency-bn.herokuapp.com/movies -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
 - Sample response: 
 ```
 {
@@ -382,7 +382,7 @@ Authorization errors will come with more detailed messages:
 
 ##### GET /movies/{movie_id}
 - Fetches specific movie by movie_id
-- Sample request: `curl http://0.0.0.0:8080/movies/3 -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
+- Sample request: `curl https://casting-agency-bn.herokuapp.com/movies/3 -H "Authorization: Bearer <JWT_FROM_ANY_ROLE>"`
 - Sample response:
 ```
 {
@@ -412,7 +412,7 @@ Authorization errors will come with more detailed messages:
 
 ##### POST /movies
 - Adds a new movie to the database and returns the list of all movies, their castings and number of castings
-- Sample request: `curl -X POST  http://0.0.0.0:8080/movies -H "Authorization: Bearer <JWT_PRODUCER>" -H "Content-Type: application/json" -d '{"title": "Movie 7", "release_date": "2020-07-21T21:30:00.000Z"}'`
+- Sample request: `curl -X POST  https://casting-agency-bn.herokuapp.com/movies -H "Authorization: Bearer <JWT_PRODUCER>" -H "Content-Type: application/json" -d '{"title": "Movie 7", "release_date": "2020-07-21T21:30:00.000Z"}'`
 - Sample response:
 ```
 {
@@ -486,7 +486,7 @@ Authorization errors will come with more detailed messages:
 
 ##### PATCH /movies/{movie_id}
 - Modifies attributes from a movie in the database if it exists and returns the movie information
-- Sample request: `curl -X POST  http://0.0.0.0:8080/movies/6 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"title": "Test modified movie", "release_date: "2020-05-21T21:30:00.000Z"}'`
+- Sample request: `curl -X POST  https://casting-agency-bn.herokuapp.com/movies/6 -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"title": "Test modified movie", "release_date: "2020-05-21T21:30:00.000Z"}'`
 - Sample response:
 ```
 {
@@ -504,7 +504,7 @@ Authorization errors will come with more detailed messages:
 ##### DELETE /movies/{movie_id}
 - Deletes the movie from the database if it exists
 - Returns success value and movie_id of deleted movie
-- Sample request: `curl -X DELETE http://0.0.0.0:8080/movies/6 -H "Authorization: Bearer <JWT_PRODUCER>`
+- Sample request: `curl -X DELETE https://casting-agency-bn.herokuapp.com/movies/6 -H "Authorization: Bearer <JWT_PRODUCER>`
 - Sample response:
 ```
 {
@@ -516,7 +516,7 @@ Authorization errors will come with more detailed messages:
 #### POST /movies/{movie_id}/actors
 - Casts an actor to the movie with movie_id if both actor and movie exist
 - Return success value and actor castings for the movie
-- Sample request: `curl -X POST  http://0.0.0.0:8080/movies/3/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"actor_id": 3}'`
+- Sample request: `curl -X POST  https://casting-agency-bn.herokuapp.com/movies/3/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"actor_id": 3}'`
 - Sample response:
 ```
 {
@@ -547,7 +547,7 @@ Authorization errors will come with more detailed messages:
 #### DELETE /movies/{movie_id}/actors
 - Removes an actos from the movie with movie_id if both actor and movie exist
 - Return success value and actor castings for the movie
-- Sample request: `curl -X DELETE  http://0.0.0.0:8080/movies/3/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"actor_id": 3}'`
+- Sample request: `curl -X DELETE  https://casting-agency-bn.herokuapp.com/movies/3/actors -H "Authorization: Bearer <JWT_DIRECTOR_OR_PRODUCER>" -H "Content-Type: application/json" -d '{"actor_id": 3}'`
 - Sample response:
 ```
 {
